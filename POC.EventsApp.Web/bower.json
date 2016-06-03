@@ -1,0 +1,20 @@
+{
+  "name": "EventsApp",
+  "homepage": "https://github.com/vibhor-agarwal/AngularEventsApp",
+  "authors": [
+    "Vibhor Agarwal <vibhor.agarwal@markit.com>"
+  ],
+  "description": "A sample AngularJS EventsApp.",
+  "main": "",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "directory": "events-app/scripts/lib/bower",
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.6"
+  }
+}
