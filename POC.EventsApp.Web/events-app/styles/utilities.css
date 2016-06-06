@@ -1,0 +1,38 @@
+﻿/*Margins*/
+
+.flush-top {
+    margin-top: 0px;
+}
+
+.flush-bottom {
+    margin-bottom: 0px;
+}
+
+.flush-right {
+    margin-right: 0px;
+}
+
+.flush-left {
+    margin-left: 0px;
+}
+
+.flushp-top {
+    padding-top: 0px;
+}
+
+.flushp-bottom {
+    padding-bottom: 0px;
+}
+
+.flushp-right {
+    padding-right: 0px;
+}
+
+.flushp-left {
+    padding-left: 0px;
+}
+
+.vertical-center {
+    vertical-align: middle;
+}
+

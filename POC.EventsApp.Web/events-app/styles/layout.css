@@ -1,0 +1,31 @@
+﻿/*Common*/
+body {
+    font-family: 'Segoe UI';
+    padding-bottom: 70px;
+}
+
+
+/*Tables*/
+.layout-fullw {
+    width: 100%;
+}
+
+.layout-table {
+    display: table;
+}
+
+.layout-table-row {
+    display: table-row;
+    width: 100%;
+}
+
+.layout-table-cell {
+    display: table-cell;
+    padding: 5px;
+}
+
+.fixed-40 {
+    width: 40px;
+}
+
+/*Semantics*/

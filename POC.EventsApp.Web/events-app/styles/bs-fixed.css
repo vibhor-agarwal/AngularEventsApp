@@ -1,0 +1,7 @@
+﻿.navbar-right-fixed {
+    margin-right: 0px;
+}
+
+.media-left, .media>.pull-left {
+    padding-right: 20px;
+}

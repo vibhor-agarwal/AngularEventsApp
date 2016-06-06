@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EventsApp</title>
+    <link rel="stylesheet" href="../scripts/lib/bower/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../scripts/lib/bower/bootstrap/dist/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="../styles/bs-fixed.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/elements.css" />
+    <link rel="stylesheet" href="../styles/utilities.css" />
+    <script src="../scripts/lib/bower/jquery/dist/jquery.min.js"></script>
+    <script src="../scripts/lib/bower/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../scripts/lib/bower/angular/angular.min.js"></script>
+    <script src="../scripts/app/app.js"></script>
+    <script src="../scripts/app/controllers/event-controller.js"></script>
+</head>
+<body ng-app="eventsApp">
+
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">EventsApp</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li class="active"><a href="#">Event</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div ng-controller="EventController">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-md-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            {{event.name}}
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <div><strong>Date: </strong>{{event.date}}</div>
+                                    <div><strong>Time: </strong>{{event.time}}</div>
+                                </div>
+                                <div class="col-xs-8">
+                                    <address>
+                                        <strong>Address: </strong><br />
+                                        {{event.location.address}} <br />
+                                        {{event.location.city}}, {{event.location.province}}
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <ul class="list-group">
+                                        <li class="list-group-item" ng-repeat="session in event.sessions">
+                                            <div class="media">
+                                                <div class="media-left media-top">
+                                                    <div class="well ea-well-vote">
+                                                        <div class="text-center ea-event-session ea-event-session-vote" ng-click="upVoteEventSession(session)">
+                                                            <span class="glyphicon glyphicon-chevron-up"></span>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <span class="badge vertical-center ea-badge-up">{{session.upVotesCount}}</span>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <span class="badge vertical-center ea-badge-down">{{session.downVotesCount}}</span>
+                                                        </div>
+                                                        <div class="text-center ea-event-session ea-event-session-vote" ng-click="downVoteEventSession(session)">
+                                                            <span class="glyphicon glyphicon-chevron-down vertical-center"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <strong>Name:</strong> {{session.name}} <br />
+                                                    <strong>Duration:</strong> {{session.duration}} <br />
+                                                    <strong>Level:</strong> {{session.level}} <br />
+                                                    <strong>Summary:</strong> {{session.abstract}} <br />
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container-fluid">
+                <p class="navbar-text">Markit</p>
+                <p class="navbar-text navbar-right navbar-right-fixed">Vibhor Agarwal</p>
+            </div>
+        </nav>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿strong {
+    font-weight: 600;
+}
+
+.ea-badge-text {
+    vertical-align: middle;
+}
+
+.ea-well-vote {
+    margin-bottom: 0px;
+    padding: 7px 8px;
+}
+
+.ea-event-session:hover {
+    cursor: pointer;
+    color: #6495ed;
+}
+
+.ea-badge-up{
+    background-color: #5cb85c;
+}
+.ea-badge-down{
+    background-color: #d9534f;
+}
