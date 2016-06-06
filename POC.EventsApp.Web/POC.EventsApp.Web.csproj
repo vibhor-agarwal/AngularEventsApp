@@ -323,6 +323,7 @@
     <Content Include="events-app\scripts\lib\bower\jquery\src\var\support.js" />
     <Content Include="events-app\scripts\lib\bower\jquery\src\var\toString.js" />
     <Content Include="events-app\scripts\lib\bower\jquery\src\wrap.js" />
+    <Content Include="events-app\styles\app.css" />
     <Content Include="events-app\views\home.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -332,7 +333,6 @@
   <ItemGroup>
     <Folder Include="events-app\images\" />
     <Folder Include="events-app\scripts\app\" />
-    <Folder Include="events-app\styles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
