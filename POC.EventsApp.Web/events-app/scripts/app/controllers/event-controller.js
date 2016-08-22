@@ -2,6 +2,9 @@
 
 var eventController = app.controller('EventController',
     function ($scope) {
+        $scope.sortColumnsEventSessions = ['name', 'upVotesCount', 'downVotesCount'];
+        $scope.selectedSortColumnEventSessions = 'name';
+        $scope.sortOrderEventSessions = '-upVotesCount';
         $scope.event = {
             name: 'Angular Boot Camp',
             date: '1/2/2016',
@@ -14,10 +17,10 @@ var eventController = app.controller('EventController',
             imageUrl: 'https://angular.io/resources/images/logos/standard/shield-large.png',
             sessions: [
                 {
-                    name: 'Directive MasterClass',
+                    name: 'Directive MasterClass Advanced',
                     creatorName: 'Vibhor Agarwal',
                     duration: '1 hr',
-                    level: 'Advanced',
+                    level: 'Introductory',
                     abstract: 'In this sessions, you will learn in adn out of directives.',
                     upVotesCount: 0,
                     downVotesCount: 0
@@ -42,9 +45,9 @@ var eventController = app.controller('EventController',
                 }
             ]
         };
-        $scope.upVoteEventSession = function (session) {
+        $scope.upVoteEventSession = $.proxy((function (session) {
             session.upVotesCount++;
-        };
+        }), $scope);
 
         $scope.downVoteEventSession = function (session) {
             session.downVotesCount++;

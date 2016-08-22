@@ -16,6 +16,24 @@
     margin-left: 0px;
 }
 
+.shim-top {
+    margin-top: 5px;
+}
+
+.shim-bottom {
+    margin-bottom: 5px;
+}
+
+.shim-right {
+    margin-right: 5px;
+}
+
+.shim-left {
+    margin-left: 5px;
+}
+
+/*Paddings*/
+
 .flushp-top {
     padding-top: 0px;
 }
@@ -31,6 +49,24 @@
 .flushp-left {
     padding-left: 0px;
 }
+
+.shimp-top {
+    padding-top: 5px;
+}
+
+.shimp-bottom {
+    padding-bottom: 5px;
+}
+
+.shimp-right {
+    padding-right: 5px;
+}
+
+.shimp-left {
+    padding-left: 5px;
+}
+
+/*Other*/
 
 .vertical-center {
     vertical-align: middle;

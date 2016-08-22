@@ -1,4 +1,11 @@
-﻿/*Common*/
+﻿*{
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+/*Common*/
 body {
     font-family: 'Segoe UI';
     padding-bottom: 70px;
