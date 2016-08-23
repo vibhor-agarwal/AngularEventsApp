@@ -6,6 +6,7 @@ var eventController = app.controller('EventController',
         $scope.selectedSortColumnEventSessions = 'name';
         $scope.sortOrderEventSessions = '-upVotesCount';
         $scope.event = {
+            id: 1,
             name: 'Angular Boot Camp',
             date: '1/2/2016',
             time: '1:30 am',
@@ -17,6 +18,7 @@ var eventController = app.controller('EventController',
             imageUrl: 'https://angular.io/resources/images/logos/standard/shield-large.png',
             sessions: [
                 {
+                    id: 1,
                     name: 'Directive MasterClass Advanced',
                     creatorName: 'Vibhor Agarwal',
                     duration: '1 hr',
@@ -26,6 +28,7 @@ var eventController = app.controller('EventController',
                     downVotesCount: 0
                 },
                 {
+                    id: 2,
                     name: 'Scopes',
                     creatorName: 'Vibhor Agarwal',
                     duration: '1 hr',
@@ -35,6 +38,7 @@ var eventController = app.controller('EventController',
                     downVotesCount: 0
                 },
                 {
+                    id: 3,
                     name: 'Controllers',
                     creatorName: 'Vibhor Agarwal',
                     duration: '1 hr',
