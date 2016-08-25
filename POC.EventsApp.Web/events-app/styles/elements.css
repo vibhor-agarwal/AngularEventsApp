@@ -16,9 +16,17 @@
     color: #6495ed;
 }
 
-.ea-badge-up{
-    background-color: #5cb85c;
+.ea-badge-up {
+    background-color: #494a49;
 }
-.ea-badge-down{
-    background-color: #d9534f;
+
+.ea-badge-down {
+    background-color: #afa7a7;
+}
+
+.page-loader {
+    background-image: url('http://www.brickhousesecurity.com/images/brickhousesecurity/en_us/local/localgraphics/loading.gif');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }

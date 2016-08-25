@@ -69,6 +69,7 @@
     <Content Include="events-app\scripts\app\app.js" />
     <Content Include="events-app\scripts\app\controllers\event-controller.js" />
     <Content Include="events-app\scripts\app\controllers\events-controller.js" />
+    <Content Include="events-app\scripts\app\services\event-data-service.js" />
     <Content Include="events-app\styles\app.css" />
     <Content Include="events-app\styles\elements.css" />
     <Content Include="events-app\styles\utilities.css" />

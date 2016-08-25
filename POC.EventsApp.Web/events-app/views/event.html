@@ -16,6 +16,7 @@
     <script src="../scripts/lib/bower/angular/angular.min.js"></script>
     <script src="../scripts/app/app.js"></script>
     <script src="../scripts/app/controllers/event-controller.js"></script>
+    <script src="../scripts/app/services/event-data-service.js"></script>
 </head>
 <body ng-app="eventsApp">
 
@@ -67,7 +68,6 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-
                                     <div class="form-inline shim-bottom">
                                         <div class="form-group">
                                             <label for=""> Order by </label>
@@ -85,7 +85,6 @@
                                             </select>
                                         </div>
                                     </div>
-
                                     <ul class="list-group">
                                         <li class="list-group-item" ng-repeat="session in event.sessions | orderBy:selectedSortColumnEventSessions | filter: queryShow">
                                             <div class="media">
@@ -131,6 +130,8 @@
             </div>
         </nav>
     </footer>
+    <div class="page-loader" style="background-image:url('http://www.brickhousesecurity.com/images/brickhousesecurity/en_us/local/localgraphics/loading.gif')">
 
+    </div>
 </body>
 </html>
