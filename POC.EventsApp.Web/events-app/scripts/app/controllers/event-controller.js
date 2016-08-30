@@ -1,11 +1,13 @@
 ﻿'use strict';
 
 var eventController = app.controller('EventController',
-    function ($scope, $log, eventDataService) {
-        $scope.sortColumnsEventSessions = ['name', 'upVotesCount', 'downVotesCount'];
-        $scope.selectedSortColumnEventSessions = 'name';
-        $scope.sortOrderEventSessions = '-upVotesCount';
-        eventDataService.getEvent().then(
+    function ($scope, $log, eventDataService, $location) {
+
+        var search = $location.search();
+        var eventId = search.id ? search.id : 1;
+
+        //remote data
+        eventDataService.getEvent(eventId).then(
             function (obj) {
                 $scope.event = obj.data;
             },
@@ -14,11 +16,15 @@ var eventController = app.controller('EventController',
             }
         );
 
+        //local - defaults
+        $scope.sortColumnsEventSessions = ['name', 'upVotesCount', 'downVotesCount'];
+        $scope.selectedSortColumnEventSessions = 'name';
+        $scope.sortOrderEventSessions = '-upVotesCount';        
+
+        //functions
         $scope.upVoteEventSession = $.proxy((function (session) {
             session.upVotesCount++;
         }), $scope);
-
-        $scope.loading = false;
         $scope.downVoteEventSession = function (session) {
             session.downVotesCount++;
         };

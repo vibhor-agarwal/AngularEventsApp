@@ -16,7 +16,7 @@
     <RootNamespace>POC.EventsApp.Web</RootNamespace>
     <AssemblyName>POC.EventsApp.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -66,14 +66,25 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="events-app\images\loader.gif" />
     <Content Include="events-app\scripts\app\app.js" />
+    <Content Include="events-app\scripts\app\controllers\create-event-controller.js" />
     <Content Include="events-app\scripts\app\controllers\event-controller.js" />
     <Content Include="events-app\scripts\app\controllers\events-controller.js" />
+    <Content Include="events-app\scripts\app\filters\falsyFilter.js" />
     <Content Include="events-app\scripts\app\services\event-data-service.js" />
+    <Content Include="events-app\scripts\lib\bower\angular-route\angular-route.js" />
+    <Content Include="events-app\scripts\lib\bower\angular-route\angular-route.min.js" />
+    <Content Include="events-app\scripts\lib\bower\angular-route\index.js" />
+    <Content Include="events-app\scripts\lib\bower\angular-sanitize\angular-sanitize.js" />
+    <Content Include="events-app\scripts\lib\bower\angular-sanitize\angular-sanitize.min.js" />
+    <Content Include="events-app\scripts\lib\bower\angular-sanitize\index.js" />
     <Content Include="events-app\styles\app.css" />
     <Content Include="events-app\styles\elements.css" />
+    <Content Include="events-app\styles\validations.css" />
     <Content Include="events-app\styles\utilities.css" />
     <Content Include="events-app\styles\layout.css" />
+    <Content Include="events-app\views\create-event.html" />
     <Content Include="events-app\views\event.html" />
     <Content Include="events-app\views\events.html" />
     <Content Include="events-app\views\includes\head.html" />
@@ -192,6 +203,18 @@
     <Content Include="events-app\scripts\lib\bower\angular\LICENSE.md" />
     <Content Include="events-app\scripts\lib\bower\angular\package.json" />
     <Content Include="events-app\scripts\lib\bower\angular\README.md" />
+    <Content Include="events-app\scripts\lib\bower\angular-sanitize\.bower.json" />
+    <Content Include="events-app\scripts\lib\bower\angular-sanitize\angular-sanitize.min.js.map" />
+    <Content Include="events-app\scripts\lib\bower\angular-sanitize\bower.json" />
+    <Content Include="events-app\scripts\lib\bower\angular-sanitize\LICENSE.md" />
+    <Content Include="events-app\scripts\lib\bower\angular-sanitize\package.json" />
+    <Content Include="events-app\scripts\lib\bower\angular-sanitize\README.md" />
+    <Content Include="events-app\scripts\lib\bower\angular-route\.bower.json" />
+    <Content Include="events-app\scripts\lib\bower\angular-route\angular-route.min.js.map" />
+    <Content Include="events-app\scripts\lib\bower\angular-route\bower.json" />
+    <Content Include="events-app\scripts\lib\bower\angular-route\LICENSE.md" />
+    <Content Include="events-app\scripts\lib\bower\angular-route\package.json" />
+    <Content Include="events-app\scripts\lib\bower\angular-route\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -341,9 +364,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="events-app\images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -359,7 +380,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54874</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:54874/</IISUrl>
+          <IISUrl>http://localhost:8091/web/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
